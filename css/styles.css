@@ -221,12 +221,12 @@ h1 {
 .portfolio {
 	font-family: "Roboto", sans-serif;
 	color: #2e2f42;
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 .portfolio .container {
 	display: flex;
 	flex-direction: column;
-	padding-top: 120px;
-	padding-bottom: 120px;
 }
 .ourportfolio {
 	font-size: 36px;
