@@ -33,8 +33,12 @@ a:focus{
 }
 a {
 	text-decoration: none;
-
 }
+
+img {
+	display: block;
+}
+
 .page-header {
 	font-size: 16px;
 	border: 1px solid #e7e9fc;
@@ -51,7 +55,6 @@ a {
 	display: flex;
 	gap: 40px;
 }
-
 .nav-link {
 	font-weight: 500;
 	color: #2e2f42;
@@ -97,13 +100,13 @@ color: #2e2f42;
 }
 .hero .container {
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
+	padding: 188px 0;
 	gap: 48px;
 }
 .hero-propose {
-	margin: 188px 316px 0;
+	max-width: 496px;
 }
 .button {
 	font-weight: 500;
@@ -113,8 +116,9 @@ color: #2e2f42;
 	color: #fff;
 	background-color: #4d5ae5;
 	cursor: pointer;
-	padding: 16px 32px;
-	border: 0 solid #4d5ae5;
+	min-width: 169px;
+	height: 56px;
+	border: none;
 	border-radius: 4px;
 	margin-bottom: 188px;
 }
@@ -133,7 +137,9 @@ h1 {
 }
 .content {
 	font-family: "Roboto", sans-serif;
-	margin: 120px 0;
+}
+.content .container {
+	padding: 120px 0;
 }
 .advantages {
 	position: absolute;
@@ -152,12 +158,16 @@ h1 {
 	letter-spacing: 0.02em;
 	color: #2e2f42;
 	display: flex;
-	width: calc((100%-72px) / 4);
+	gap: 24px;
+}
+.adv-item {
+	width: calc((100% - 72px) / 4);
 }
 .adv-content {
 	font-weight: 500;
 	font-size: 20px;
 	letter-spacing: 0.02em;
+	margin-bottom: 8px;
 }
 .adv-text {
 	font-size: 16px;
@@ -170,16 +180,15 @@ h1 {
 	color: #2e2f42;
 	background-color: #F4F4FD;
 	letter-spacing: 0.02em;
+}
+.team .container {
 	display: flex;
 	align-items: center;
-	margin-top: 120px;
-	margin-bottom: 72px;
-	height: 732px;
+	flex-direction: column;
+	padding: 120px 0;
 }
 .team-item {
 	background-color: #ffffff;
-
-
 }
 .ourteam {
 	font-size: 36px;
@@ -187,34 +196,41 @@ h1 {
 	letter-spacing: 0.02em;
 	text-align: center;
 	text-transform: capitalize;
-	margin-top: 120px;
-
+	margin-bottom: 72px;
 }
 .team-list {
 	display: flex;
 	justify-content: space-between;
-	padding: 0px 0px 32px 0px;
-	border-radius: 0 0 4px 4px;
-	margin-top: 72px;
-	margin-bottom: 120px;
+	gap: 24px;
 }
-
+.team-item {
+	border-radius: 0 0 4px 4px;
+}
+.name-position {
+	padding: 32px 0;
+}
 .team-content {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
-	
+	text-align: center;
+	margin-bottom: 8px
 }
 .team-text {
 	font-size: 16px;
 	line-height: 1.5;
 	color: #434455;
+	text-align: center;
 }
 .portfolio {
 	font-family: "Roboto", sans-serif;
 	color: #2e2f42;
-	margin: 120px 156px;
+}
+.portfolio .container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 120px;
 }
 .ourportfolio {
 	font-size: 36px;
@@ -226,26 +242,27 @@ h1 {
 }
 .portfolio-list {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: space-between;
+	column-gap: 24px;
 }
 .portfolio-item {
 	background-color: #FFFFFF;
+	width: calc((100% - 48px) / 3);
 }
 	.portfolio-item:nth-child(-n + 3) {
 	margin-bottom: 48px;
 }
 .portfolio-item {
-	border-bottom: 1px solid #e7e9fc;
-	border-left: 1px solid #e7e9fc;
-	border-right: 1px solid #e7e9fc;
+	display: flex;
+	padding: 32px 16px
+	border: 1px solid #e7e9fc;
+	border-top: none;
 }
 .portfolio-content {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	margin-bottom: 8px
 }
 .portfolio-text {
 	font-size: 16px;
@@ -257,11 +274,20 @@ h1 {
 	font-family: "Roboto", sans-serif;
 	background-color: #2e2f42;
 }
+.page-footer .container {
+	padding: 100px 0;
+
+}
 .footer-offer {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: #f4f4fd;
+	max-width: 264px
+}
+.footer-logo {
+	display: inline-block;
+	margin-bottom: 16px;
 }
 .footer-logo .logo-part {
 	color: #f4f4fd;
